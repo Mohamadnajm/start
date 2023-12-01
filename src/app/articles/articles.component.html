@@ -1,0 +1,64 @@
+
+<h1>Articles Component</h1>
+<p>Articles content goes here.</p>
+<!-- <p-button (click)="toggleTable()">Toggle Table</p-button> -->
+    
+        <!-- <div class="Articles" *ngIf="showTable"> -->
+            <!-- <table class="Articles" *ngIf="showTable"> -->
+
+                <!-- <div class="Articles" *ngIf="showTable">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>name</th>
+                                <th>price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of getJsonValue">
+                                <td>{{ item.id }}</td>
+                                <td>{{ item.name }}</td>
+                                <td>{{ item.standard_price }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> -->
+                
+        <!-- </table> -->
+        <!-- </div> -->
+        
+<div class="card">
+    <p-table [value]="getJsonValue" [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>price</th>
+                <th>Catégorie</th>
+                <th>Code-barres</th>
+                <th>Volume</th>
+
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr [ngClass]="{'row-accessories': product.category === 'Accessories'}">
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <!-- categ_id,barcode,volume -->
+                <td>{{ product.standard_price }}</td>
+                <td>{{ product.categ_id }}</td>
+                <td>{{ product.barcode }}</td>
+                <td>{{ product.volume }}</td>
+                <td>
+                    <div [ngClass]="{'outofstock': product.quantity === 0, 'lowstock': (product.quantity > 0 && product.quantity < 10),'instock': product.quantity > 10}">
+                        {{product.quantity}}
+                    </div>
+                </td>
+                <td><button (click)="updateArticles(product.id)">Update Articles</button></td>
+
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
