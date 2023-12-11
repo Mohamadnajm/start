@@ -22,6 +22,9 @@ export class ArticlesComponent implements OnInit {
   public postJsonValue: any;
 
   public getMethod() {
+  let url = 'https://demo.appbase.ma/api/product.template/?query={id, name, standard_price,categ_id,barcode,volume}'
+  url += '&session_id=' + this.sessionId
+
     this.http
       .get(
         'https://demo.appbase.ma/api/product.template/?session_id=3dbb0d953d5a5d617d04ee82b46c3c62bbfb4460&query={id, name, standard_price,categ_id,barcode,volume}'
