@@ -2,25 +2,25 @@
 <p>Login content goes here.</p> -->
 <!-- <a routerLink="/home">Go to Home</a> -->
 <div class="center-container">
-    <fieldset class="form-container">
-        <legend>Login Form</legend>
-        <form action="">
-        
-            <!-- <div class="card flex justify-content-center"> -->
-            <div class="flex flex-column gap-2">
-                    <label id="label-M" for="username">Username : </label><br>
-                    <input pInputText aria-describedby="username-help" type="text" name="username" id="username" [(ngModel)]="newUser.name" placeholder="username"><br>
-            </div> 
-                    <!-- <label for="username">name: </label><br>
-                    <input type="text" name="login" id="username" [(ngModel)]="newUser.name"><br><br> -->
-            <div class="flex flex-column gap-1">
-                    <label id="label-M" for="passwor">password : </label><br>
-                    <input  pInputText   aria-describedby="password-help"  type="password" name="password" id="password" [(ngModel)]="newUser.password" placeholder="password" >
-                    <!-- <label for="password">enter your password: </label><br>
-                    <input type="password" name="password" id="password" [(ngModel)]="newUser.password"><br><br> -->
-            </div>
-            <!-- </div> -->
-                    <button type="button" (click)="login()" pButton label="">Login</button>
-        </form>
-    </fieldset>
-</div>
+        <fieldset class="form-container">
+                <legend>Login Form</legend>
+                <form action="">
+                
+                <!-- <div class="card flex justify-content-center"> -->
+                <div class="flex flex-column gap-2">
+                        <label id="label-M" for="username">Username : </label><br>
+                        <input pInputText aria-describedby="username-help" type="text" name="username" id="username" [(ngModel)]="newUser.name" placeholder="username"><br>
+                </div> 
+                        <!-- <label for="username">name: </label><br>
+                        <input type="text" name="login" id="username" [(ngModel)]="newUser.name"><br><br> -->
+                <div class="flex flex-column gap-1">
+                        <label id="label-M" for="passwor">password : </label><br>
+                        <input  pInputText   aria-describedby="password-help"  type="password" name="password" id="password" [(ngModel)]="newUser.password" placeholder="password" >
+                        <!-- <label for="password">enter your password: </label><br>
+                        <input type="password" name="password" id="password" [(ngModel)]="newUser.password"><br><br> -->
+                </div>
+                <!-- </div> -->
+                        <button type="button" (click)="login()" pButton label="">Login</button>
+                </form>
+        </fieldset>
+        </div>

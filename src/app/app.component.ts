@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { UserService } from './user.service';
+// import { UserService } from './user.service';
 
+// import { MatDialog } from '@angular/material/dialog';
 // import { RouterModule } from '@angular/router';
 
 @Component({
@@ -9,7 +10,8 @@ import { UserService } from './user.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+[x: string]: any;
   title = 'new_pr_angular';
-
+  
   
 }
