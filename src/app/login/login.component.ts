@@ -5,7 +5,7 @@ import { UserService } from '../user.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent {   
   newUser: any = {
     name: '',
     password: '',
@@ -25,8 +25,8 @@ value: any;
     this.userService
       .login(this.newUser.name, this.newUser.password)
       .subscribe((res: any) => {
-        console.log(res);
-      });
+          localStorage.setItem('sessionId', res.result.session_id)
+        });
   }
 
 

@@ -119,7 +119,7 @@ export class UserService {
       // volume
       // ... other properties if needed
     };
-    const sessionId = '78f84f6733288e8bcb21b9cbaa029ceaf266cd73';
+    const sessionId = localStorage.getItem("sessionId");
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -161,7 +161,13 @@ export class UserService {
   // }
   
   delete(id: any, sessionId: string): Observable<any> {
-    const deleteUrl = `${this.apiUrl}/api/product.template/${id}?session_id=${sessionId}`;
+    // if (!id || !id.id || !sessionId) {
+    //   console.error('Invalid id or sessionId');
+    //   return;
+    // }
+    console.log(id.id,sessionId);
+    // id.id = 5 ; sessionId = '8976bda48ea8d2e7b605c193d511b36ba7fe3ef9'
+    const deleteUrl = `${this.apiUrl}/api/product.template/${id.id}?session_id=${sessionId}`;
     return this.http.delete(deleteUrl);
   }
   
