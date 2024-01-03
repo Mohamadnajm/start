@@ -1,0 +1,55 @@
+<!-- <h1>{{title}}</h1> -->
+
+<body class="body">
+  
+  <div class="navbar">
+    <form>
+  
+    <div class="menu" >
+      <ul class="router">
+        <mat-toolbar>
+
+          <!-- <li></li>
+            
+            <li><a routerLink="/login">Login</a></li>
+            <li><a routerLink="/articles">Articles</a></li> -->
+            <li>
+              <a routerLink="/home"><button class="pi pi-home">Home</button></a>
+              <!-- <p>Home</p> -->
+            </li>
+            <li>
+              <a routerLink="/login"><button class="pi pi-sign-in">Login</button></a>
+              <!-- <p>Login</p> -->
+            </li>
+            <li>
+              <a  routerLink="/articles"><button class="pi pi-server">Articles</button></a>
+              <!-- <p>Articles</p> -->
+            </li>
+            <li>
+              <a routerLink="/dialoga"><button class="pi pi-external-link">Dialog</button></a>
+              <!-- <p>Dialog</p> -->
+            </li>
+                <!-- <td><button mat-raised-button color="primary" (click)="addNewArticle()">Add</button></td> -->
+
+            <!-- <mat-dialog-actions>
+              <button mat-raised-button color="primary" (click)="openDialog()">contact</button>
+            </mat-dialog-actions> -->
+          </mat-toolbar>
+      
+      </ul>
+    </div>
+    <!-- <label for="username">name: </label><br>
+    <input type="text" name="login" id="username" [(ngModel)]="newUser.name"><br><br>
+    <label for="password">enter your password: </label><br>
+    <input type="password" name="password" id="password" [(ngModel)]="newUser.password"><br><br>
+    <button type="button" (click)="login()" pButton label="">Login</button> -->
+    <!-- <app-articles></app-articles> -->
+    <router-outlet></router-outlet>
+    
+
+
+
+    <!-- <button type="button" (click)="getData()">getData</button> -->
+  </form>
+</div>
+</body>
